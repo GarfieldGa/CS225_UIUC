@@ -1,0 +1,28 @@
+if (st.top() == '}') {
+  count3--;
+  st.pop();
+  std::cout<<"reach 20"<<std::endl;
+} else if (st.top() == '{' && count3 < 0) {
+  count3++;
+  st.pop();
+  std::cout<<"reach 24"<<std::endl;
+} else if (st.top() == '[' && count2 < 0) {
+  count2++;
+  st.pop();
+  std::cout<<"reach 28"<<std::endl;
+} else if (st.top() == ']') {
+  count2--;
+  st.pop();
+  std::cout<<"reach 32"<<std::endl;
+} else if (st.top() == '(' && count1 < 0) {
+  count1++;
+  st.pop();
+  std::cout<<"reach 36"<<std::endl;
+} else if (st.top() == ')') {
+  count1--;
+  st.pop();
+  std::cout<<"reach 40"<<std::endl;
+} else {
+  std::cout<<"reach 43"<<std::endl;
+  return false;
+}

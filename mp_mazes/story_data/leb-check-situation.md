@@ -1,0 +1,1 @@
+The street is empty? Why it's so dark out there? Wait, all those street lamp is destroyed? How it's possible, what's going on here? Wait, I saw someone not far away, can't tell male or female as it's too dark. That scream should come from it, should I get closer to check what's going on?

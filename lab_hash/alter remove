@@ -1,0 +1,49 @@
+if (!keyExists(key)) {
+  return;
+}
+elems--;
+size_t i = hashes::hash(key, size);
+while (should_probe[i]) {
+  if (table[i]->first == key) {
+    delete table[i];
+    table[i] = NULL;
+    should_probe[i] = false;
+    break;
+  }
+  i++;
+}
+i++;
+while (should_probe[i]) {
+  table[i-1] = table[i];
+  should_probe[i - 1] = should_probe[i];
+  i++;
+}
+delete table[i];
+table[i] = NULL;
+should_probe[i] = false;
+
+
+
+
+
+------------------------------------------
+if (!keyExists(key)) {
+  return -1;
+}
+size_t i = hashes::hash(key, size);
+while (should_probe[i]) {
+  if (table[i]->first == key) {
+    return i;
+  }
+  i++;
+}
+return -1;
+------------------------------------------
+
+int i = findIndex(key);
+if (i == -1) {
+  return;
+}
+delete table[i];
+table[i] = NULL;
+elems--;
